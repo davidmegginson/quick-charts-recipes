@@ -14,8 +14,8 @@
             ],
             "recipes": [
                 {
-                    "name": "Total refugee applicants - latest year",
-                    "title": "Total refugee applicants - latest year",
+                    "name": "New refugee applications - latest year",
+                    "title": "New refugee applications - latest year",
                     "description": "",
                     "type": "key figure",
                     "ingredients": {
@@ -36,8 +36,8 @@
                     "numberFormat": "us"
                 },
                 {
-                    "name": "Refugee applicants by country of origin - latest year",
-                    "title": "Refugee applicants by country of origin - latest year",
+                    "name": "New refugee applications, by country of origin - latest year",
+                    "title": "New refugee applications, by country of origin - latest year",
                     "description": "",
                     "type": "chart",
                     "ingredients": {
@@ -58,8 +58,8 @@
                     }
                 },
                 {
-                    "name": "Refugee applications recognized by country of origin - latest year",
-                    "title": "Refugee applications recognized by country of origin - latest year",
+                    "name": "Refugee applications recognized, by country of origin - latest year",
+                    "title": "Refugee applications recognized, by country of origin - latest year",
                     "description": "",
                     "type": "chart",
                     "ingredients": {
