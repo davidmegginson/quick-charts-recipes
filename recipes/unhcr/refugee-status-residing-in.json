@@ -1,58 +1,149 @@
 {
-    "name": "refugee-status-residing-in",
-    "title": "Refugee status determination (country of residence) ",
-    "type": "cookbook",
-    "columns": [
-        "#country+origin",
-        "#date+year",
-        "#x_applicants+inyear"
-    ],
-    "recipes": [
+    "name":"HDX curated cookbooks",
+    "title":"HDX curated cookbooks",
+    "type":"cookbook-library",
+    "cookbooks":[
         {
-            "title": "New applicants - latest year",
-            "description": "",
-            "type":"key figure",
-            "ingredient": {
-                "aggregateColumns": [
-                    "#country+origin"
-                ],
-                "valueColumns": [
-                    "#x_applicants+inyear"
-                ],
-                "aggregateFunctions": [
-                    "sum"
-                ],
-                "filters": {
-                    "filterWith": [{
-                        "#date+year": "$MAX$"
-                    }] 
+            "name":"Refugee applicants (residing in)",
+            "title": "Refugee applicants (residing in)",
+            "type":"cookbook",
+            "columns": [
+                "#date+year",
+                "#country+origin",
+                "#x_applicants+inyear"
+            ],
+            "recipes": [
+                {
+                    "name": "Requirements and Funding for Latest Year",
+                    "title": "Requirements and Funding for Latest Year",
+                    "description": "Bar chart comparing requirements and funding for latest year",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#sector+name"
+                        ],
+                        "valueColumns": [
+                            "#value+funding+pct"
+                        ]
+                    }
+                },
+                {
+                    "name": "Requirements and Funding by Cluster for Latest Year",
+                    "title": "Requirements and Funding by Cluster for Latest Year",
+                    "description": "Stacked bar chart comparing requirements and funding by cluster for latest year",
+                    "type": "comparison-chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "valueColumns": [
+                            "#value+funding+total+usd / #value+funding+required+usd"
+                        ]
+                    }
+                },
+
+                {
+                    "name": "Requirements and Funding by Year",
+                    "title": "Requirements and Funding by Year",
+                    "description": "Stacked bar chart comparing requirements and funding by year",
+                    "type": "comparison-chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "aggregateColumns": [
+                            "#date+year"
+                        ],
+                        "valueColumns": [
+                            "#value+funding+total+usd / #value+funding+required+usd"
+                        ]
+                    }
                 }
-            },    
-            "unit": "applicants",
-            "numberFormat": "us"
+            ]
         },
         {
-            "title": "New applicants by country - latest year",
-            "description": "",
-            "type":"chart",
-            "ingredient": {
-                "aggregateColumns": [
-                    "#country+origin"
-                ],
-                "valueColumns": [
-                    "#x_applicants+inyear"
-                ],
-                "aggregateFunctions": [
-                    "sum"
-                ],
-                "filters": {
-                    "filterWith": [{
-                        "#date+year": "$MAX$"
-                    }] 
+            "name":"fts",
+            "title": "Financial tracking information",
+            "type":"cookbook",
+            "columns": [
+                "#value+funding+total+usd",
+                "#value+funding+required+usd",
+                "#date+year"
+            ],
+            "recipes": [
+                {
+                    "name": "Requirements and Funding for Latest Year",
+                    "title": "Requirements and Funding for Latest Year",
+                    "description": "Bar chart comparing requirements and funding for latest year",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#sector+name"
+                        ],
+                        "valueColumns": [
+                            "#value+funding+pct"
+                        ]
+                    }
+                },
+                {
+                    "name": "Requirements and Funding by Cluster for Latest Year",
+                    "title": "Requirements and Funding by Cluster for Latest Year",
+                    "description": "Stacked bar chart comparing requirements and funding by cluster for latest year",
+                    "type": "comparison-chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "valueColumns": [
+                            "#value+funding+total+usd / #value+funding+required+usd"
+                        ]
+                    }
+                },
+
+                {
+                    "name": "Requirements and Funding by Year",
+                    "title": "Requirements and Funding by Year",
+                    "description": "Stacked bar chart comparing requirements and funding by year",
+                    "type": "comparison-chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "aggregateColumns": [
+                            "#date+year"
+                        ],
+                        "valueColumns": [
+                            "#value+funding+total+usd / #value+funding+required+usd"
+                        ]
+                    }
                 }
-            },    
-            "unit": "applicants",
-            "numberFormat": "us"
+            ]
         }
     ]
 }
