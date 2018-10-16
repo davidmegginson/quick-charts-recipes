@@ -3,9 +3,9 @@
     "title": "Refugee status determination (country of residence) ",
     "type": "cookbook",
     "columns": [
-        "#activity+id",
-        "#sector",
-        "#org+reporting+name"
+        "#country+origin",
+        "#date+year",
+        "#x_applicants+inyear"
     ],
     "recipes": [
         {
