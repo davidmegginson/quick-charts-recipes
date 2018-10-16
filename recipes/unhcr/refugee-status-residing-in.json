@@ -1,0 +1,35 @@
+{
+    "name": "refugee-status-residing-in",
+    "title": "Refugee status determination (country of residence) ",
+    "type": "cookbook",
+    "columns": [
+        "#activity+id",
+        "#sector",
+        "#org+reporting+name"
+    ],
+    "recipes": [
+        {
+            "title": "Refugee applicant countries of origin - latest year",
+            "description": "",
+            "type":"chart",
+            "ingredient": {
+                "aggregateColumns": [
+                    "#country+origin"
+                ],
+                "valueColumns": [
+                    "#x_applicants+inyear"
+                ],
+                "aggregateFunctions": [
+                    "sum"
+                ],
+                "filters": {
+                    "filterWith": [{
+                        "#date+year": "$MAX$"
+                    }] 
+                }
+            },    
+            "unit": "countries",
+            "numberFormat": "us"
+        }
+    ]
+}
