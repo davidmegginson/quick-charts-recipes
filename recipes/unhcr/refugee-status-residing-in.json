@@ -17,7 +17,7 @@
                     "name": "Total refugee applicants - latest year",
                     "title": "Total refugee applicants - latest year",
                     "description": "",
-                    "type": "chart",
+                    "type": "key figure",
                     "ingredients": {
                         "aggregateFunctions": [
                             "key figure"
