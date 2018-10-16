@@ -58,6 +58,28 @@
                     }
                 },
                 {
+                    "name": "Refugee applications recognized by country of origin - latest year",
+                    "title": "Refugee applications recognized by country of origin - latest year",
+                    "description": "",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#country+origin"
+                        ],
+                        "valueColumns": [
+                            "#x_decisions+recognized"
+                        ]
+                    }
+                },
+                {
                     "name": "Requirements and Funding by Cluster for Latest Year",
                     "title": "Requirements and Funding by Cluster for Latest Year",
                     "description": "Stacked bar chart comparing requirements and funding by cluster for latest year",
