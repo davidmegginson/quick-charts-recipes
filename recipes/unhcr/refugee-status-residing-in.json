@@ -20,20 +20,20 @@
                     "type": "key figure",
                     "ingredients": {
                         "aggregateFunctions": [
-                            "key figure"
+                            "sum"
                         ],
                         "filtersWith": [
                             {
                                 "#date+year": "$MAX$"
                             }
                         ],
-                        "aggregateColumns": [
-                            "#country+origin"
-                        ],
+                        "aggregateColumns": [],
                         "valueColumns": [
                             "#x_applicants+inyear"
                         ]
-                    }
+                    },
+                    "unit": "applicants",
+                    "numberFormat": "us"
                 },
                 {
                     "name": "Refugee applicants by country of origin - latest year",
