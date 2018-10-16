@@ -9,7 +9,7 @@
     ],
     "recipes": [
         {
-            "title": "Refugee applicant countries of origin - latest year",
+            "title": "New applicants by country - latest year",
             "description": "",
             "type":"chart",
             "ingredient": {
