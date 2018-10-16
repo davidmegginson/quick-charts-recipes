@@ -14,9 +14,9 @@
             ],
             "recipes": [
                 {
-                    "name": "Requirements and Funding for Latest Year",
-                    "title": "Requirements and Funding for Latest Year",
-                    "description": "Bar chart comparing requirements and funding for latest year",
+                    "name": "Refugee applicants by country of origin - latest year",
+                    "title": "Refugee applicants by country of origin - latest year",
+                    "description": "",
                     "type": "chart",
                     "ingredients": {
                         "aggregateFunctions": [
@@ -28,10 +28,10 @@
                             }
                         ],
                         "aggregateColumns": [
-                            "#sector+name"
+                            "#country+origin"
                         ],
                         "valueColumns": [
-                            "#value+funding+pct"
+                            "#x_applicants+inyear"
                         ]
                     }
                 },
