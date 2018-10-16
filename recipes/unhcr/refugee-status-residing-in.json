@@ -9,6 +9,29 @@
     ],
     "recipes": [
         {
+            "title": "New applicants - latest year",
+            "description": "",
+            "type":"key figure",
+            "ingredient": {
+                "aggregateColumns": [
+                    "#country+origin"
+                ],
+                "valueColumns": [
+                    "#x_applicants+inyear"
+                ],
+                "aggregateFunctions": [
+                    "sum"
+                ],
+                "filters": {
+                    "filterWith": [{
+                        "#date+year": "$MAX$"
+                    }] 
+                }
+            },    
+            "unit": "applicants",
+            "numberFormat": "us"
+        },
+        {
             "title": "New applicants by country - latest year",
             "description": "",
             "type":"chart",
@@ -28,7 +51,7 @@
                     }] 
                 }
             },    
-            "unit": "countries",
+            "unit": "applicants",
             "numberFormat": "us"
         }
     ]
