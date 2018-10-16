@@ -14,6 +14,28 @@
             ],
             "recipes": [
                 {
+                    "name": "Total refugee applicants - latest year",
+                    "title": "Total refugee applicants - latest year",
+                    "description": "",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "key figure"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#country+origin"
+                        ],
+                        "valueColumns": [
+                            "#x_applicants+inyear"
+                        ]
+                    }
+                },
+                {
                     "name": "Refugee applicants by country of origin - latest year",
                     "title": "Refugee applicants by country of origin - latest year",
                     "description": "",
