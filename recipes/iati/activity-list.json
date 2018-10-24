@@ -32,7 +32,6 @@
                     "distinct-count"
                 ],
                 "aggregateColumns": [
-                    "#activity+id",
                     "#org+reporting+name"
                 ],
                 "valueColumns":[

@@ -4,18 +4,18 @@
     "type":"cookbook-library",
     "cookbooks":[
         {
-            "name":"Refugee applicants (residing in)",
-            "title": "Refugee applicants (residing in)",
+            "name":"Resettlement arrivals (originating from)",
+            "title": "Resettlement arrivals (originating from)",
             "type":"cookbook",
             "columns": [
                 "#date+year",
-                "#country+origin",
-                "#x_applicants+inyear"
+                "#country+asylum",
+                "#affected"
             ],
             "recipes": [
                 {
-                    "name": "Total new asylum seekers (latest year)",
-                    "title": "Total new asylum seekers (latest year)",
+                    "name": "Total new resettlement arrivals (latest year)",
+                    "title": "Total new resettlement arrivals (latest year)",
                     "description": "",
                     "type": "key figure",
                     "ingredients": {
@@ -29,7 +29,7 @@
                         ],
                         "aggregateColumns": [],
                         "valueColumns": [
-                            "#x_applicants+inyear"
+                            "#affected"
                         ]
                     },
                     "uiProperties": {
@@ -40,8 +40,8 @@
                     }
                 },
                 {
-                    "name": "New refugee applications, by country of origin - latest year",
-                    "title": "New refugee applications, by country of origin - latest year",
+                    "name": "Country of asylum - latest year",
+                    "title": "Country of asylum - latest year",
                     "description": "",
                     "type": "chart",
                     "ingredients": {
@@ -54,32 +54,27 @@
                             }
                         ],
                         "aggregateColumns": [
-                            "#country+origin"
+                            "#country+asylum"
                         ],
                         "valueColumns": [
-                            "#x_applicants+inyear"
+                            "#affected"
                         ]
                     }
                 },
                 {
-                    "name": "Refugee applications recognized, by country of origin - latest year",
-                    "title": "Refugee applications recognized, by country of origin - latest year",
+                    "name": "Resettlements by year",
+                    "title": "Resettlements by year",
                     "description": "",
                     "type": "chart",
                     "ingredients": {
                         "aggregateFunctions": [
                             "sum"
                         ],
-                        "filtersWith": [
-                            {
-                                "#date+year": "$MAX$"
-                            }
-                        ],
                         "aggregateColumns": [
-                            "#country+origin"
+                            "#date+year"
                         ],
                         "valueColumns": [
-                            "#x_decisions+recognized"
+                            "#affected"
                         ]
                     }
                 }
