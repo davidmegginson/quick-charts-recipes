@@ -14,8 +14,8 @@
             ],
             "recipes": [
                 {
-                    "name": "New refugee applications - latest year",
-                    "title": "New refugee applications - latest year",
+                    "name": "Total new asylum seekers (latest year)",
+                    "title": "Total new asylum seekers (latest year)",
                     "description": "",
                     "type": "key figure",
                     "ingredients": {
@@ -32,8 +32,12 @@
                             "#x_applicants+inyear"
                         ]
                     },
-                    "unit": "applicants",
-                    "numberFormat": "us"
+                    "uiProperties": {
+                        "numberFormat": "us",
+                        "unit": "none",
+                        "postText": "new asylum seekers",
+                        "title": "Total new asylum seekers (latest year)"
+                    },
                 },
                 {
                     "name": "New refugee applications, by country of origin - latest year",
