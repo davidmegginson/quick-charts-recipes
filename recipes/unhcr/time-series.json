@@ -16,8 +16,8 @@
             ],
             "recipes": [
                 {
-                    "name": "Total population of concern (latest year)",
-                    "title": "Total population of concern (latest year)",
+                    "name": "Population of concern (latest year)",
+                    "title": "Population of concern (latest year)",
                     "description": "",
                     "type": "key figure",
                     "ingredients": {
