@@ -33,7 +33,7 @@
                 },
                 {
                     "name": "Population types (latest year)",
-                    "title": "Populations by type (latest year)",
+                    "title": "Population types (latest year)",
                     "description": "",
                     "type": "chart",
                     "ingredients": {
@@ -54,8 +54,8 @@
                     }
                 },
                 {
-                    "name": "Population origins (latest year)",
-                    "title": "Populations by origin country (latest year)",
+                    "name": "Countries of origin (latest year)",
+                    "title": "Countries of origin (latest year)",
                     "description": "",
                     "type": "chart",
                     "ingredients": {
