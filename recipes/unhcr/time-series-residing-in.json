@@ -1,0 +1,81 @@
+{
+    "name":"HDX curated cookbooks",
+    "title":"HDX curated cookbooks",
+    "type":"cookbook-library",
+    "cookbooks":[
+        {
+            "name":"Timeline (residing in)",
+            "title": "Timeline (residing in)",
+            "type":"cookbook",
+            "columns": [
+                "#date+year"
+            ],
+            "recipes": [
+                {
+                    "name": "Total population of concern (latest year)",
+                    "title": "Total population of concern (latest year)",
+                    "description": "",
+                    "type": "key figure",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [],
+                        "valueColumns": [
+                            "#affected"
+                        ]
+                    }
+                },
+                {
+                    "name": "Population types (latest year)",
+                    "title": "Populations by type (latest year)",
+                    "description": "",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#population+type"
+                        ],
+                        "valueColumns": [
+                            "#affected"
+                        ]
+                    }
+                },
+                {
+                    "name": "Population origins (latest year)",
+                    "title": "Populations by origin country (latest year)",
+                    "description": "",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#country+origin"
+                        ],
+                        "valueColumns": [
+                            "#affected"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
