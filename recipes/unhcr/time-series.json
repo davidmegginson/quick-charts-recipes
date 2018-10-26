@@ -4,11 +4,15 @@
     "type":"cookbook-library",
     "cookbooks":[
         {
-            "name":"Timeline (residing in)",
-            "title": "Timeline (residing in)",
+            "name":"Time series",
+            "title": "Time series",
             "type":"cookbook",
             "columns": [
-                "#date+year"
+                "#date+year",
+                "#country+origin",
+                "#country+residence",
+                "#population+type",
+                "#affected"
             ],
             "recipes": [
                 {
@@ -47,6 +51,28 @@
                         ],
                         "aggregateColumns": [
                             "#population+type"
+                        ],
+                        "valueColumns": [
+                            "#affected"
+                        ]
+                    }
+                },
+                {
+                    "name": "Countries of residence (latest year)",
+                    "title": "Countries of residence (latest year)",
+                    "description": "",
+                    "type": "chart",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [
+                            "#country+residence"
                         ],
                         "valueColumns": [
                             "#affected"
