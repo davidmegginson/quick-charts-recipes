@@ -17,9 +17,6 @@
                 "aggregateFunctions": [
                     "distinct-count"
                 ],
-		"aggregateColumns": [
-		    "#activity+id"
-		],
                 "valueColumns": [
                     "#activity+id"
                 ]
