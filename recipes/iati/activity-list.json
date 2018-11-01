@@ -15,8 +15,11 @@
             "type": "key figure",
             "ingredients": {
                 "aggregateFunctions": [
-                    "count"
+                    "distinct-count"
                 ],
+		"aggregateColumns": [
+		    "#activity+id"
+		],
                 "valueColumns": [
                     "#activity+id"
                 ]
