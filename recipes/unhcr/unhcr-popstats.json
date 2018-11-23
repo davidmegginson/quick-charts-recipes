@@ -104,10 +104,10 @@
             "type":"cookbook",
             "columns": [
                 "#date+year",
-                "#country+origin",
                 "#country+residence",
+                "#country+origin",
                 "#population+type",
-                "#affected!"
+                "#affected"
             ],
             "recipes": [
                 {
