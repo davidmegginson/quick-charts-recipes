@@ -292,6 +292,46 @@
             ],
             "recipes": [
                 {
+                    "name": "Total females (latest year)",
+                    "title": "Total females (latest year)",
+                    "description": "",
+                    "type": "key figure",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [],
+                        "valueColumns": [
+                            "#affected+f+total"
+                        ]
+                    }
+                },
+                {
+                    "name": "Total males (latest year)",
+                    "title": "Total males (latest year)",
+                    "description": "",
+                    "type": "key figure",
+                    "ingredients": {
+                        "aggregateFunctions": [
+                            "sum"
+                        ],
+                        "filtersWith": [
+                            {
+                                "#date+year": "$MAX$"
+                            }
+                        ],
+                        "aggregateColumns": [],
+                        "valueColumns": [
+                            "#affected+m+total"
+                        ]
+                    }
+                },
+                {
                     "name": "By year",
                     "title": "By year",
                     "type": "comparison-chart",
