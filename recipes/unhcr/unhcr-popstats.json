@@ -220,6 +220,7 @@
                         "filtersWith": [
                             {
                                 "#date+year": "$MAX$"
+                                "#x_procedure+rsd": "G / FI"
                             }
                         ],
                         "aggregateColumns": [],
@@ -257,10 +258,10 @@
                     }
                 },
                 {
-                    "name": "Refugee applications recognized, by country of origin - latest year",
-                    "title": "Refugee applications recognized, by country of origin - latest year",
+                    "name": "Positive decisions, by country of origin - latest year",
+                    "title": "Positive, by country of origin - latest year",
                     "description": "",
-                    "type": "chart",
+                    "type": "comparison-chart",
                     "ingredients": {
                         "aggregateFunctions": [
                             "sum"
@@ -274,7 +275,7 @@
                             "#country+origin"
                         ],
                         "valueColumns": [
-                            "#x_decisions+recognized"
+                            "#x_decisions+recognized / #x_decisions+other"
                         ]
                     }
                 }
