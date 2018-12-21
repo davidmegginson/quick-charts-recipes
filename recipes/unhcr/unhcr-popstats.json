@@ -238,8 +238,8 @@
                     }
                 },
                 {
-                    "name": "New refugee applications, by country of origin - latest year",
-                    "title": "New refugee applications, by country of origin - latest year",
+                    "name": "New refugee applications (latest year)",
+                    "title": "New refugee applications (latest year)",
                     "description": "",
                     "type": "chart",
                     "ingredients": {
@@ -260,8 +260,8 @@
                     }
                 },
                 {
-                    "name": "Positive decisions, by country of origin - latest year",
-                    "title": "Positive, by country of origin - latest year",
+                    "name": "Positive decisions (latest year)",
+                    "title": "Positive decisions (latest year)",
                     "description": "",
                     "type": "comparison-chart",
                     "ingredients": {
