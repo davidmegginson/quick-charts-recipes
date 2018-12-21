@@ -220,6 +220,8 @@
                         "filtersWith": [
                             {
                                 "#date+year": "$MAX$"
+                            },
+                            {
                                 "#x_procedure+rsd": "G / FI"
                             }
                         ],
