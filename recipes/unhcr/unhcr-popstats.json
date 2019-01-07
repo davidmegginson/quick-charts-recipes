@@ -199,8 +199,8 @@
             ]
         },
         {
-            "name":"Refugee applicants",
-            "title": "Refugee applicants",
+            "name":"Asylum seekers",
+            "title": "Asylum seekers",
             "type":"cookbook",
             "columns": [
                 "#date+year",
@@ -209,8 +209,8 @@
             ],
             "recipes": [
                 {
-                    "name": "Total new asylum seekers (latest year)",
-                    "title": "Total new asylum seekers (latest year)",
+                    "name": "New asylum seekers (latest year)",
+                    "title": "New asylum seekers (latest year)",
                     "description": "",
                     "type": "key figure",
                     "ingredients": {
@@ -220,9 +220,6 @@
                         "filtersWith": [
                             {
                                 "#date+year": "$MAX$"
-                            },
-                            {
-                                "#x_procedure+rsd": "G / FI"
                             }
                         ],
                         "aggregateColumns": [],
@@ -238,8 +235,8 @@
                     }
                 },
                 {
-                    "name": "New refugee applications (latest year)",
-                    "title": "New refugee applications (latest year)",
+                    "name": "First-instance countries of origin (latest year)",
+                    "title": "Countries of origin (latest year)",
                     "description": "",
                     "type": "chart",
                     "ingredients": {
@@ -249,6 +246,9 @@
                         "filtersWith": [
                             {
                                 "#date+year": "$MAX$"
+                            },
+                            {
+                                "#x_procedure+rsd": "G / FI"
                             }
                         ],
                         "aggregateColumns": [
@@ -271,6 +271,9 @@
                         "filtersWith": [
                             {
                                 "#date+year": "$MAX$"
+                            },
+                            {
+                                "#x_procedure+rsd": "G / FI"
                             }
                         ],
                         "aggregateColumns": [
