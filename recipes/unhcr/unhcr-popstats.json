@@ -280,7 +280,7 @@
                             "#country+origin"
                         ],
                         "valueColumns": [
-                            "#x_decisions+other / #x_decisions+recognized"
+                            "#x_decisions+recognized / #x_decisions+other"
                         ]
                     }
                 }
