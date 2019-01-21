@@ -238,7 +238,7 @@
                     }
                 },
                 {
-                    "name": "First-instance countries of origin (latest year)",
+                    "name": "New applicants' countries of origin (latest year)",
                     "title": "Countries of origin (latest year)",
                     "description": "",
                     "type": "chart",
