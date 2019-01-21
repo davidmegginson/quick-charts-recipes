@@ -220,6 +220,9 @@
                         "filtersWith": [
                             {
                                 "#date+year": "$MAX$"
+                            },
+                            {
+                                "#x_procedure+rsd": "G / FI"
                             }
                         ],
                         "aggregateColumns": [],
@@ -271,9 +274,6 @@
                         "filtersWith": [
                             {
                                 "#date+year": "$MAX$"
-                            },
-                            {
-                                "#x_procedure+rsd": "G / FI"
                             }
                         ],
                         "aggregateColumns": [
