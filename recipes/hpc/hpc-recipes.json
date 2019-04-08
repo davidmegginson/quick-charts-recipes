@@ -1,0 +1,73 @@
+{
+    "name": "HPC",
+    "title": "HPC",
+    "type": "cookbook",
+    "columns": [
+        "#activity+name",
+        "#response+plan+name"
+    ],
+    "recipes": [
+        {
+            "title": "Total projects",
+            "name": "Total projects",
+            "description": "",
+            "type": "key figure",
+            "ingredients": {
+                "aggregateFunctions": [
+                    "distinct-count"
+                ],
+                "valueColumns": [
+                    "#activity+code"
+                ]
+
+            }
+        },
+        {
+            "title": "Total funds requested",
+            "name": "Total funds requested",
+            "description": "",
+            "type": "key figure",
+            "ingredients": {
+                "aggregateFunctions": [
+                    "sum"
+                ],
+                "valueColumns": [
+                    "#value+requested+usd"
+                ]
+
+            }
+        },
+        {
+            "title": "Most-active clusters",
+            "name": "Most-active clusters",
+            "type": "chart",
+            "ingredients": {
+                "aggregateFunctions": [
+                    "distinct-count"
+                ],
+                "aggregateColumns": [
+                    "sector+cluster+name"
+                ],
+                "valueColumns": [
+                    "#activity+code"
+                ]
+            }
+        },
+        {
+            "title": "Most-active organisations",
+            "name": "Most-active organisations",
+            "type": "chart",
+            "ingredients": {
+                "aggregateFunctions": [
+                    "distinct-count"
+                ],
+                "aggregateColumns": [
+                    "org+prog+name"
+                ],
+                "valueColumns": [
+                    "#activity+code"
+                ]
+            }
+        }
+    ]
+}
