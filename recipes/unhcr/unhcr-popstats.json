@@ -9,15 +9,12 @@
             "type": "cookbook",
             "columns": [
                 "#date+year",
-                "#country+residence",
-                "#country+origin",
-                "#affected+refugees",
-                "#affected+total"
+                "#country",
+                "#affected"
             ],
             "recipes": [
                 {
-                    "name": "Population of concern (latest year)",
-                    "title": "Population of concern (latest year)",
+                    "name": "Total (latest year)",
                     "description": "",
                     "type": "key figure",
                     "ingredients": {
@@ -31,13 +28,12 @@
                         ],
                         "aggregateColumns": [],
                         "valueColumns": [
-                            "#affected+total"
+                            "#affected"
                         ]
                     }
                 },
                 {
-                    "name": "Countries of origin (latest year)",
-                    "title": "Countries of origin (latest year)",
+                    "name": "By country (latest year)",
                     "description": "",
                     "type": "chart",
                     "ingredients": {
@@ -50,38 +46,15 @@
                             }
                         ],
                         "aggregateColumns": [
-                            "#country+origin"
+                            "#country+name"
                         ],
                         "valueColumns": [
-                            "#affected+total"
+                            "#affected"
                         ]
                     }
                 },
                 {
-                    "name": "Countries of residence (latest year)",
-                    "title": "Countries of residence (latest year)",
-                    "description": "",
-                    "type": "chart",
-                    "ingredients": {
-                        "aggregateFunctions": [
-                            "sum"
-                        ],
-                        "filtersWith": [
-                            {
-                                "#date+year": "$MAX$"
-                            }
-                        ],
-                        "aggregateColumns": [
-                            "#country+residence"
-                        ],
-                        "valueColumns": [
-                            "#affected+total"
-                        ]
-                    }
-                },
-                {
-                    "name": "Total population of concern by year",
-                    "title": "Total population of concern by year",
+                    "name": "Total by year",
                     "description": "",
                     "type": "chart",
                     "ingredients": {
@@ -92,7 +65,7 @@
                             "#date+year"
                         ],
                         "valueColumns": [
-                            "#affected+total"
+                            "#affected"
                         ]
                     }
                 }
